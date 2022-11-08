@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+   --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+*, *::before, *::after{
+   box-sizing: inherit;
+   -moz-box-sizing: inherit;
+   -webkit-box-sizing: inherit;
+   margin: 0;
+   padding: 0;
+}
+html{
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   font-size: 62.5%;
+}
+body{
+   font-family: 'Lato', sans-serif;
+   font-size: 1.6rem;
+   line-height: 1.6;
+   background: #f7f7f7;
+   min-height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.container{
+   margin: 3rem auto;
+   width: 35rem;
+}
+h1{
+   letter-spacing: 1px;
+}
+h3{
+   border-bottom: 1px solid #bbb;
+   padding-bottom: 1rem;
+   margin: 4rem 0 1rem;
+}
+h4{
+   text-transform: uppercase;
+}
+.inc-exp-container{
+   background-color: #fff;
+   box-shadow: var(--box-shadow);
+   border-radius: 0.5rem;
+   padding: 2rem;
+   margin: 2rem auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.inc-exp-container > div{
+   flex: 1;
+   text-align: center;
+}
+
+.inc-exp-container > div:first-of-type{
+   border-right: 1px solid #dedede;
+}
+
+.money{
+   font-size: 2rem;
+   letter-spacing: 1px;
+   margin: 0.5rem 0;
+}
+.money.plus{
+   color: #2ecc71;
+}
+.money.minus{
+   color: #e74c3c;
+}
+label{
+   display: inline-block;
+   margin: 1rem 0;
+}
+input[type='text'], input[type='number']{
+   border: 1px solid #dedede;
+   border-radius: 2px;
+   display: block;
+   font-size: 1.6rem;
+   padding: 1rem;
+   width: 100%;
+}
+.btn{
+   background-color: #9c88ff;
+   box-shadow: var(--box-shadow);
+   border: none;
+   display: block;
+   cursor: pointer;
+   font-size: 1.6rem;
+   margin: 1rem 0 3rem;
+   padding: 1rem;
+   width: 100%;
+}
+.btn:focus, .delete-btn:focus{
+   outline: none;
+}
+.list{
+   list-style-type: none;
+   margin-bottom: 4rem;
+}
+.list li{
+   background-color: #fff;
+   box-shadow: var(--box-shadow);
+   color: #333;
+   padding: 1rem;
+   margin: 1rem 0;
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+}
+.list li.plus{
+   border-right: 0.5rem solid #2ecc71;
+}
+.list li.minus{
+   border-right: 0.5rem solid #e74c3c;
+}
+.delete-btn{
+   background-color: #e74c3c;
+   border: none;
+   color: #fff;
+   cursor: pointer;
+   font-size: 2rem;
+   line-height: 2rem;
+   padding: 4px 5px;
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translate(-100%, -50%);
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+.list li:hover .delete-btn{
+   opacity: 1;
+}
